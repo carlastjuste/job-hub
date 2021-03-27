@@ -6,7 +6,7 @@ When searching for jobs as a professional, it can get incredibly overwhelming, d
 
 ## Concept
 
-Job Hub is a open source, job search tool. The app uses API's to search multiple sites for job information, pertaining to the users selected career and specification search. The app is a single point resource for anyone that does not want to subscribe to multiple sites. This app brings the user the utility of multiple site, but to one consolidated space. The user only has to make an account, add their certifications, and search through the list of jobs the app provides. 
+Job Hub is a open source, job search tool. The app uses API's to search multiple sites for job information, pertaining to the users selected career and specification search. The app is a single point resource for anyone that does not want to subscribe to multiple sites. This app brings the user the utility of multiple sites, but makes that data available in one consolidated application. All the user has to do is make an account, add their certifications, and search through the list of jobs the app provides.
 
 ## App In Action
 
