@@ -38,7 +38,9 @@ JobHub is an open sourced, job search tool. The app uses API's to search multipl
 
 ## Contact Us
 
-[Will add later]
+* <a href="mailto:carlastjuste@gmail.com"> Carla St.Juste</a>
+* <a href="mailto:mariaortegapb@gmail.com"> Maria Ortega </a>
+* <a href="mailto:srawilkinsonwilliams@yahoo.com"> Wilkinson Williams </a>
 
 
 
