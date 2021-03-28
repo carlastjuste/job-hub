@@ -8,7 +8,7 @@ platforms.
 
 ## Concept
 
-JobHub is an open sourced, job search tool. The app uses API's to search multiple sites for information, pertaining to the users selected career or specified search. The app is a single point resource for anyone that does not want to subscribe to multiple sites. This app brings the user the utility of multiple sites, but makes that data available in one consolidated application. All the user has to do is make an account, fill out the online form, and search through the list of jobs the app provides.
+JobHub is an open sourced, job search tool. The app uses API's to search multiple sites for information, pertaining to the users selected career or specified search. The app is a single point resource for anyone that does not want to subscribe to multiple sites. This app brings the user the utility of multiple sites, but makes that data available in one consolidated application. All the user has to do is make an account, fill out the online form, and pick their job choices from the list of jobs the app provides.
 
 ## App In Action
 
