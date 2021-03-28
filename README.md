@@ -20,27 +20,27 @@ JobHub is an open sourced, job search tool. The app uses API's to search multipl
 
 ## Technologies
 
-* React
-* Express
-* MySQL
-* Heroku
-* APIs
+ React
+ Express
+ MySQL
+ Heroku
+ APIs
 
 ## Contributors
 
-* Carla St. Juste
-* Maria Ortega
-* Wilkinson Williams
+##### Carla St. Juste
+##### Maria Ortega
+##### Wilkinson Williams
 
 ## Licenses
 
-* ![License badge](https://img.shields.io/badge/License-MIT-green)
+ ![License badge](https://img.shields.io/badge/License-MIT-green)
 
 ## Contact Us
 
-* <a href="mailto:carlastjuste@gmail.com"> Carla St.Juste</a>
-* <a href="mailto:mariaortegapb@gmail.com"> Maria Ortega </a>
-* <a href="mailto:srawilkinsonwilliams@yahoo.com"> Wilkinson Williams </a>
+ <a href="mailto:carlastjuste@gmail.com"> Carla St.Juste</a>
+ <a href="mailto:mariaortegapb@gmail.com"> Maria Ortega </a>
+ <a href="mailto:srawilkinsonwilliams@yahoo.com"> Wilkinson Williams </a>
 
 
 
