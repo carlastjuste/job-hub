@@ -34,7 +34,7 @@ Job Hub is an open sourced, job search tool. The app uses API's to search multip
 
 ## Licenses
 
-[Will add later]
+* ![License badge](https://img.shields.io/badge/License-MIT-Blue)
 
 ## Contact Us
 
