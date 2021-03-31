@@ -18,7 +18,7 @@ class StatArea extends Component {
               <img src="img/chart.png" className='chart-icon'/>
             </div>
             <div className='info'>
-            <h3>Salary Trend</h3>
+            <h3>Job Market Trend</h3>
             <p class="lead mb-0">Access salary and vacancy data</p>
             </div>
 
@@ -27,19 +27,19 @@ class StatArea extends Component {
         <div class="col-lg-4">
           <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
             <div class="features-icons-icon d-flex">
-              <i class="icon-layers m-auto text-primary"></i>
+            <img src="img/chart.png" className='chart-icon'/>
             </div>
-            <h3>Bootstrap 4 Ready</h3>
-            <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
+            <h3>Employer </h3>
+            <p class="lead mb-0">Access salary and vacancy data</p>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="features-icons-item mx-auto mb-0 mb-lg-3">
             <div class="features-icons-icon d-flex">
-              <i class="icon-check m-auto text-primary"></i>
+            <img src="img/chart.png" className='chart-icon'/>
             </div>
-            <h3>Easy to Use</h3>
-            <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+            <h3>TBD</h3>
+            <p class="lead mb-0">Access salary and vacancy data</p>
           </div>
         </div>
       </div>
