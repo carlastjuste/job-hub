@@ -15,11 +15,13 @@ class StatArea extends Component {
         <div className="col-lg-4">
           <div className="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
             <div className="features-icons-icon d-flex">
-              <img src="img/chart.png"/>
-             
+              <img src="img/chart.png" className='chart-icon'/>
             </div>
+            <div className='info'>
             <h3>Salary Trend</h3>
             <p class="lead mb-0">Access salary and vacancy data</p>
+            </div>
+
           </div>
         </div>
         <div class="col-lg-4">

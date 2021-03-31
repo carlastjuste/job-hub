@@ -66,13 +66,23 @@ header.masthead h1 {
   }
 }
 
+.chart-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding-bottom: 20px;
+}
+
 .features-icons {
   padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-bottom: 17rem;
 }
 
 .features-icons .features-icons-item {
   max-width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .features-icons .features-icons-item .features-icons-icon {
