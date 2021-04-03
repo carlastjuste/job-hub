@@ -8,6 +8,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { Search } from 'react-bootstrap-icons';
 import Header from './components/header';
 import JobSearch from './components/jobSearchArea';
+import Job from './components/job'
 import StatArea from './components/statArea';
 import Footer from './components/footer';
 import Login from './components/login';
@@ -26,12 +27,12 @@ function App() {
        <Header />
        <Switch>
          <Route exact path = "/">
-         <JobSearch />
-         <StatArea />
+            <JobSearch />
+            <StatArea />
          </Route>
 
-         <Route exact path={isLoggedIn ? '/test' : '/login'}>
-            <JobSearch />
+         <Route exact path={isLoggedIn ? '/job' : '/login'}>
+            <Job />
          </Route>
 
          <Route exact path = "/registration">
