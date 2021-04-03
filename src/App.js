@@ -10,6 +10,8 @@ import Header from './components/header';
 import JobSearch from './components/jobSearchArea';
 import StatArea from './components/statArea';
 import Footer from './components/footer';
+import Login from './components/login';
+import Registration from './components/registration';
 import Page1 from './components/page1';
 
 
@@ -22,16 +24,24 @@ function App() {
    <Router>
      <div>
        <Header />
-       <JobSearch />
-      
        <Switch>
          <Route exact path = "/">
+         <JobSearch />
          <StatArea />
          </Route>
 
          <Route exact path={isLoggedIn ? '/test' : '/'}>
             <JobSearch />
          </Route>
+
+         <Route exact path = "/registration">
+         <Registration />
+         </Route>
+
+         <Route exact path = "/login">
+         <Login />
+         </Route>
+
 
          <Route>
             <p> 404 not found</p>
