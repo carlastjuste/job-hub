@@ -16,8 +16,8 @@ class Header extends Component {
                     <a className="navbar-brand" href="/">Carreer Hub</a>
                 </div>
                 <ul className="nav navbar-nav justify-content-center">
-                    <li className="active"><a href="/hi">Job Application</a></li>
-                    <li className="dropdown"><a className="dropdown-toggle" data-toggle="dropdown" href="/testPage1">Page 1 <span className="caret"></span></a>
+                    <li className="active"><a href="/job">My Jobs</a></li>
+                    <li className="dropdown"><a className="dropdown-toggle" data-toggle="dropdown" href="/testPage1">Page1<span className="caret"></span></a>
                         <ul className="dropdown-menu">
                             <li><a href="#">Page 1-1</a></li>
                             <li><a href="#">Page 1-2</a></li>

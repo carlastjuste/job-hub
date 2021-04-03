@@ -134,3 +134,10 @@ footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+
+.job-from {
+  margin-top: 5rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  padding: 5rem;
+}
