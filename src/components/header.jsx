@@ -9,6 +9,10 @@ class Header extends Component {
     render() { 
         return ( 
     <React.Fragment>
+           <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+           {/* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"></link>
+  {/* <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> */}
+  {/* <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"/> */} 
             <div className="Header">
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="navbar-collapse" id="navbarNav">
@@ -36,6 +40,7 @@ class Header extends Component {
                 </nav>
             </div>
 
+          
             </React.Fragment>
 
         );
