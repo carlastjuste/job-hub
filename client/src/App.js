@@ -14,6 +14,7 @@ import Footer from './components/footer';
 import Login from './components/login';
 import Registration from './components/registration';
 import JobList from './components/jobList';
+import SavedJobs from './components/savedJobs';
 
 
 const isLoggedIn = true;
@@ -31,8 +32,12 @@ function App() {
             <StatArea />
          </Route>
 
-         <Route exact path={isLoggedIn ? '/jobs' : '/login'}>
+         <Route exact path={isLoggedIn ? '/add-job' : '/login'}>
             <Job />
+         </Route>
+
+         <Route exact path={isLoggedIn ? '/saved-job' : '/login'}>
+           <SavedJobs />
          </Route>
 
          <Route exact path = "/jobs">
