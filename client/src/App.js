@@ -13,7 +13,7 @@ import StatArea from './components/statArea';
 import Footer from './components/footer';
 import Login from './components/login';
 import Registration from './components/registration';
-import Profile from './components/profile';
+import JobList from './components/jobList';
 
 
 const isLoggedIn = true;
@@ -35,9 +35,9 @@ function App() {
             <Job />
          </Route>
 
-         <Route exact path = "/profile">
+         <Route exact path = "/jobs">
          <JobSearch />
-         <Profile />
+         <JobList />
          </Route>
 
          <Route exact path = "/registration">

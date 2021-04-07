@@ -3,7 +3,7 @@ import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from
 import API from "../utils/API";
 import _ from 'lodash';
 
-class EmployeePage extends Component {
+class JobList extends Component {
     state = { 
         searchValue: '',
         jobList :[],
@@ -62,17 +62,17 @@ render() {
 <React.Fragment>
 {this.state.jobList.map((job) => (
     <div className ="card">
-        <h5 className="card-header"><a href = {job.refs.landing_page}>{job.name}</a><p class="font-weight-light">{job.company.name}</p></h5>
-         <div class="card-body">
-            <h5 class="card-title">{job.locations.name}</h5>
-            <p class="card-text">Hello</p>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong"> View More</button>
+        <h5 className="card-header"><a href = {job.refs.landing_page}>{job.name}</a><p className="font-weight-light">{job.company.name}</p></h5>
+         <div className="card-body">
+            <h5 className="card-title">{job.locations.name}</h5>
+            <p className="card-text">Hello</p>
+            <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong"> View More</button>
 
-            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">{job.name}<p class="font-weight-light">{job.company.name}</p></h5>
+            <div className="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div className="modal-dialog modal-lg" role="document">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title" id="exampleModalLongTitle">{job.name}<p class="font-weight-light">{job.company.name}</p></h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"> 
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -98,4 +98,4 @@ render() {
     }
 }
 
-export default EmployeePage;
+export default JobList;
