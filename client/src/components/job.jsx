@@ -37,20 +37,20 @@ class job extends Component {
                 </select>
             </div>
         </div>
-        <div class="form-group row">
-            <div class="col-sm-2">Application Status : </div>
-                <div class="col-sm-10">
-                    <div class="form-check">
-             <          input class="form-check-input" type="checkbox" id="gridCheck1" />
-                        <label class="form-check-label" for="gridCheck1"> Applied </label>
+        <div className="form-group row">
+            <div className="col-sm-2">Application Status :</div> 
+                <div className="col-sm-10">
+                    <div className="form-check">
+             <          input className="form-check-input" type="checkbox" id="gridCheck1" />
+                        <label className="form-check-label" for="gridCheck1"> Applied </label>
                     </div>
                 </div>
         </div>
-        
         <div className="form-group">
             <label for="note">Notes :</label>
             <textarea className="form-control" id="note" rows="3"></textarea>
         </div>
+        <button type="button" class="btn btn-primary btn-lg">Submit</button>
 
     </form>
     
