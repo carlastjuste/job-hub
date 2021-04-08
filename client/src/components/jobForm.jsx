@@ -1,8 +1,31 @@
 import React, { Component } from 'react';
 
 
-class job extends Component {
-    state = {  }
+class jobForm extends Component {
+    state = { 
+        jobtitle: '',
+        compagny:'',
+        city:'',
+        state:'',
+        country:'',
+        link:'',
+        status:'',
+        note:'',
+        
+    }
+
+
+    onSubmit(e) {
+        e.preventDefault();
+    }
+
+    onChange = e => {
+        // let inputValue = e.currentTarget.value;
+        // this.setState({searchValue});
+    }
+
+
+
     render() { 
         return (
 <React.Fragment>
@@ -37,6 +60,13 @@ class job extends Component {
                 </select>
             </div>
         </div>
+        <label for="basic-url">Job Post URL: </label>
+            <div className="input-group mb-3">
+            <div className="input-group-prepend">
+                <span className="input-group-text" id="basic-addon3">https://example.com/users/</span>
+            </div>
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" />
+        </div>
         <div className="form-group row">
             <div className="col-sm-2">Application Status :</div> 
                 <div className="col-sm-10">
@@ -46,6 +76,7 @@ class job extends Component {
                     </div>
                 </div>
         </div>
+        
         <div className="form-group">
             <label for="note">Notes :</label>
             <textarea className="form-control" id="note" rows="3"></textarea>
@@ -59,4 +90,4 @@ class job extends Component {
     }
 }
  
-export default job;
+export default jobForm;
