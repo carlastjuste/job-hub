@@ -8,7 +8,8 @@ const jobSchema = new Schema({
   city: { type: String, required: true },
   state: { type: String, required: false },
   country: { type: String, required: false },
-  date: { type: Date, required: false },
+  link: { type: String, required: false },
+  status: { type: Date, required: false },
   note: { type: String, required: true },
 }, {
   timestamps: true,

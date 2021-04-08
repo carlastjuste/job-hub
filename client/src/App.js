@@ -1,20 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Route , Switch} from "react-router-dom";
 import HomePage from './components/homePage';
-import './App.css';
-import "bootstrap/dist/css/bootstrap.min.css";
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { Search } from 'react-bootstrap-icons';
 import Header from './components/header';
 import JobSearch from './components/jobSearchArea';
-import Job from './components/job'
+import JobForm from './components/jobForm'
 import StatArea from './components/statArea';
 import Footer from './components/footer';
 import Login from './components/login';
 import Registration from './components/registration';
 import JobList from './components/jobList';
 import SavedJobs from './components/savedJobs';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { Search } from 'react-bootstrap-icons';
+import "bootstrap/dist/css/bootstrap.min.css";
+import './App.css';
 
 
 const isLoggedIn = true;
@@ -33,7 +33,7 @@ function App() {
          </Route>
 
          <Route exact path={isLoggedIn ? '/add-job' : '/login'}>
-            <Job />
+            <JobForm />
          </Route>
 
          <Route exact path={isLoggedIn ? '/saved-job' : '/login'}>
