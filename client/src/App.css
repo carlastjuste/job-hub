@@ -141,3 +141,16 @@ footer.footer {
   margin-right: 10rem;
   padding: 5rem;
 }
+
+.card-deck {
+  margin: 4rem;
+  padding: 4rem;
+}
+
+.search-area {
+  width: 33%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+}

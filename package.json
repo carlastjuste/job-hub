@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "axios": "^0.18.0",
+        "bootstrap-icons": "^1.4.1",
         "express": "^4.16.3",
         "html-react-parser": "^1.2.4",
         "if-env": "^1.0.4",
