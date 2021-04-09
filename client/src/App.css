@@ -154,3 +154,12 @@ footer.footer {
   margin-right: auto;
   margin-top: 5rem;
 }
+
+.job-list {
+  margin: 4rem;
+  /* padding: 4rem; */
+}
+
+.job-list-card {
+  margin: 4rem;
+}
