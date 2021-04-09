@@ -8,7 +8,9 @@ const apiEndPoint = "http://localhost:5000/jobs/";
 
 class SavedJobs extends Component {
     state = {  
-        jobs:[]
+        jobs:[],
+        searchValue:''
+
     }
 
 
@@ -17,11 +19,19 @@ class SavedJobs extends Component {
         this.setState({jobs})
     }
 
+    handleChange = e => {
+        let searchValue = this.state.SearchValue;
+        searchValue = e.currentTarget.value;
+        this.setState({searchValue});
+
+    }
+
 
     render() { 
         console.log(this.state.job);
         return (
 <React.Fragment>
+    {/* Input to search for saved jobs by job title */}
     <div className = "search-area">
         <input className = "form-control" 
             value={this.state.SearchValue}
@@ -29,8 +39,16 @@ class SavedJobs extends Component {
             type="search" 
             placeholder="Search by job title..."  />
     </div>
+
+    {/* Card to display Saved Jobs */}
     <div className ="card-deck"> 
-        {this.state.jobs.map((job, index) => (
+        {this.state.jobs.filter(job =>{
+            if (this.state.searchValue ==="") 
+                {return job;}
+            else if (job.jobtitle.toLowerCase().includes(this.state.searchValue.toLowerCase()))
+                {return job;}
+            }
+        ).map((job, index) => (
 
         <div className="card" >
             <div className="card-header">
