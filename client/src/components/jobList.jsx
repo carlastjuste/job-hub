@@ -57,18 +57,25 @@ class JobList extends Component {
     
 
 render() {
-  
-            return (
+    return (
 <React.Fragment>
-{this.state.jobList.map((job) => (
-    <div className ="card">
-        <h5 className="card-header"><a href = {job.refs.landing_page}>{job.name}</a><p className="font-weight-light">{job.company.name}</p></h5>
-         <div className="card-body">
-            <h5 className="card-title">{job.locations.name}</h5>
-            <p className="card-text">Hello</p>
-            <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong"> View More</button>
 
-            <div className="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+<div className ="job-list"> 
+    {this.state.jobList.map((job) => (
+        <div className ="job-list-card card">
+            <h5 className="card-header"><a href = {job.refs.landing_page}>{job.name}</a><p className="font-weight-light">{job.company.name}</p></h5>
+            <div className="card-body">
+                <h5 className="card-title">{job.locations.name}</h5>
+                <p className="card-text">Hello</p>
+                <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#jobDescModal"> View More</button> 
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Publication date: {job.publication_date}</small>
+            </div>
+
+
+            
+            <div className="modal fade" id="jobDescModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                 <div className="modal-dialog modal-lg" role="document">
                     <div className="modal-content">
                         <div className="modal-header">
@@ -78,7 +85,7 @@ render() {
                             </button>
                         </div>
                         <div class="modal-body">
-                           {ReactHtmlParser(job.contents)}
+                            {ReactHtmlParser(job.contents)}
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -86,15 +93,12 @@ render() {
                         </div>
                     </div>
                 </div>
-            </div>   
-            </div>
-                <div class="card-footer">
-                    <small class="text-muted">Publication date: {job.publication_date}</small>
-                </div>
-            </div>       
+            </div>  
+        </div>       
 ))}
+</div>
 </React.Fragment>
-            )
+        )
     }
 }
 
