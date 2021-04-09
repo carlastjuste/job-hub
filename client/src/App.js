@@ -32,7 +32,7 @@ function App() {
             <StatArea />
          </Route>
 
-         <Route exact path={isLoggedIn ? '/add-job' : '/login'}>
+         <Route exact path={isLoggedIn ? '/jobs/add' : '/login'}>
             <JobForm />
          </Route>
 

@@ -21,7 +21,7 @@ class Header extends Component {
                     <li className="active"><a href="/jobs">Jobs</a></li>
                     <li className="dropdown"><a className="dropdown-toggle" data-toggle="dropdown" href="/jobs">My Jobs<span className="caret"></span></a>
                       <ul className="dropdown-menu">
-                            <li><a href="/add-job">Add a Job Link</a></li>
+                            <li><a href="/jobs/add">Add a Job Link</a></li>
                             <li><a href="/saved-job">Saved Job</a></li>
                             <li><a href="#">Page 1-3</a></li>
                         </ul>

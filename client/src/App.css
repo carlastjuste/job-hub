@@ -141,3 +141,8 @@ footer.footer {
   margin-right: 10rem;
   padding: 5rem;
 }
+
+.card-deck {
+  margin: 4rem;
+  padding: 4rem;
+}
