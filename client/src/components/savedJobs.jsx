@@ -22,6 +22,13 @@ class SavedJobs extends Component {
         console.log(this.state.job);
         return (
 <React.Fragment>
+    <div className = "search-area">
+        <input className = "form-control" 
+            value={this.state.SearchValue}
+            onChange={this.handleChange}
+            type="search" 
+            placeholder="Search by job title..."  />
+    </div>
     <div className ="card-deck"> 
         {this.state.jobs.map((job, index) => (
 
