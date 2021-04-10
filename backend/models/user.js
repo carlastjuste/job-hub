@@ -1,19 +1,46 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const Schema = mongoose.Schema;
-
-const userSchema = new Schema({
-  username: {
+const ThirdPartyProviderSchema = new mongoose.Schema({
+  provider_name: {
     type: String,
-    required: true,
-    unique: true,
-    trim: true,
-    minlength: 3
+    default: null,
   },
-}, {
-  timestamps: true,
+  provider_id: {
+    type: String,
+    default: null,
+  },
+  provider_data: {
+    type: {},
+    default: null,
+  },
 });
 
-const User = mongoose.model('User', userSchema);
+// Create Schema
+const userSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+    },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    email_is_verified: {
+      type: Boolean,
+      default: false,
+    },
+    password: {
+      type: String,
+    },
 
+    third_party_auth: [ThirdPartyProviderSchema],
+    date: {
+      type: Date,
+      default: Date.now,
+    },
+  },
+  { strict: false }
+);
+const User = mongoose.model("User", userSchema);
 module.exports = User;
