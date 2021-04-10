@@ -7,7 +7,9 @@ class Registration extends Component {
     render() { 
         return ( 
             <React.Fragment>
-                <p> This is the registration form </p>
+              <div className="wrapper">
+                <p className="reg-header"> This is the registration form </p>
+            
                 <div>
         <meta charSet="utf-8" />
         <link rel="stylesheet" href="form.css" />
@@ -68,7 +70,8 @@ class Registration extends Component {
           </div>
         </div>
       </div>
-            </React.Fragment>
+      </div>
+            </React.Fragment>        
          );
     }
 }
