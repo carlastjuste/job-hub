@@ -7,6 +7,7 @@ class JobList extends Component {
     state = { 
         searchValue: '',
         jobList :[],
+        pageNumber: 1
      };
 
     handleChange = e => {
@@ -17,10 +18,15 @@ class JobList extends Component {
     }
 
     async componentDidMount () {
-        const res = await API.getJobs(); 
+        const res = await API.getJobs(this.state.pageNumber); 
         const jobList = res.data.results;
         this.setState({jobList : jobList});
         console.log(jobList);
+    }
+
+    handlePageChange = (pageNumber) => {
+        const number = pageNumber;
+        this.setState({pageNumber : number})
     }
 
     // FormatDate(dat) {
@@ -63,10 +69,18 @@ render() {
 <div className ="job-list"> 
     {this.state.jobList.map((job) => (
         <div className ="job-list-card card">
-            <h5 className="card-header"><a href = {job.refs.landing_page}>{job.name}</a><p className="font-weight-light">{job.company.name}</p></h5>
+
+            <div className="card-header">
+               <h5> <a href = {job.refs.landing_page}>{job.name}</a></h5>
+                <p className="font-weight-light">{job.company.name}</p>
+                <ul id="location">
+                    {job.locations.map((location, index) => ( index === 0 ?  <li>{location.name}</li> : <li>{" - " +location.name}</li>))}
+                </ul>
+            </div>
             <div className="card-body">
                 <h5 className="card-title">{job.locations.name}</h5>
-                <p className="card-text">Hello</p>
+                <p className="card-text">{ReactHtmlParser(job.contents).slice(0,1)}</p>
+
                 <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#jobDescModal"> View More</button> 
             </div>
             <div class="card-footer">
@@ -97,6 +111,24 @@ render() {
         </div>       
 ))}
 </div>
+
+
+
+
+
+<nav aria-label="Page navigation example">
+  <ul className="pagination justify-content-center">
+    <li className="page-item disabled">
+      <a className="page-link" href="#" tabindex="-1">Previous</a>
+    </li>
+    <li className="page-item"><a className="page-link" href="#" >1</a></li>
+    <li className="page-item"><a className="page-link" href="#">2</a></li>
+    <li className="page-item"><a className="page-link" href="#">3</a></li>
+    <li className="page-item">
+      <a className="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
 </React.Fragment>
         )
     }

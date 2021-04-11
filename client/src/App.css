@@ -163,6 +163,12 @@ footer.footer {
 .job-list-card {
   margin: 4rem;
 }
+
+
+ul#location li {
+  display: inline;
+}
+
 /* registration modules */
 .reg-header{
   text-align: center;
@@ -202,3 +208,4 @@ div.wrapper{
   margin: 0.5rem;
   border-radius: 0.5rem;
 }
+

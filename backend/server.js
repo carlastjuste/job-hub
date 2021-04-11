@@ -28,6 +28,11 @@ connection.once('open', () => {
   console.log("MongoDB database connection established successfully");
 })
 
+
+app.use(express.static('client/src'));
+
+
+
 const jobsRouter = require('./routes/jobs');
 const usersRouter = require('./routes/users');
 
