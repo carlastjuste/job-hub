@@ -164,6 +164,48 @@ footer.footer {
   margin: 4rem;
 }
 
+
 ul#location li {
   display: inline;
 }
+
+/* registration modules */
+.reg-header{
+  text-align: center;
+  font-style: italic;
+  font-size: 900;
+  margin-top: 2rem;
+  color:  #3045bd;
+}
+div.wrapper{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wrapper .Form-Box{
+  text-align: center;
+}
+.Form-Box .title-text{
+  color:  #3045bd;
+  font-weight: bolder;
+}
+.wrapper .form-container{
+  margin: 1rem;
+  padding: 0.5rem;
+}
+.form-container .slide-Func > label,.slide-Func > input{
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+.form-inner .login input{
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+}
+.form-inner .signup input{
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+}
+
