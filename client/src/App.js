@@ -32,24 +32,24 @@ function App() {
             <StatArea />
          </Route>
 
-         <Route exact path={isLoggedIn ? '/jobs/add' : '/login'}>
+         <Route exact path={isLoggedIn ? 'api/jobs/add' : '/login'}>
             <JobForm />
          </Route>
 
-         <Route exact path={isLoggedIn ? '/saved-job' : '/login'}>
+         <Route exact path={isLoggedIn ? 'api/saved-job' : '/login'}>
            <SavedJobs />
          </Route>
 
-         <Route exact path = "/jobs">
+         <Route exact path = "api/jobs">
          <JobSearch />
          <JobList />
          </Route>
 
-         <Route exact path = "/registration">
+         <Route exact path = "api/registration">
          <Registration />
          </Route>
 
-         <Route exact path = "/login">
+         <Route exact path = "api/login">
          <Login />
          </Route>
 
