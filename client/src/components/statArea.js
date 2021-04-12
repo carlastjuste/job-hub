@@ -38,7 +38,7 @@ class StatArea extends Component {
             <div class="features-icons-icon d-flex">
             <img src="img/chart.png" className='chart-icon'/>
             </div>
-            <h3>TBD</h3>
+            <h3>Coaching</h3>
             <p class="lead mb-0">Access salary and vacancy data</p>
           </div>
         </div>

@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+
+const apiEndPoint = "http://localhost:5000/jobs/add";
 
 
 class jobForm extends Component {
@@ -18,11 +21,13 @@ class jobForm extends Component {
 
     };
 
-    handleSubmit = e => {
+    handleSubmit = async e => {
        e.preventDefault(); 
 
        //call backend server
        console.log('Submitted');
+       const {data: job} = await axios.post(apiEndPoint, this.state.job)
+       console.log(job)
 
     }
 
