@@ -8,7 +8,7 @@ class Header extends Component {
         return ( 
     <React.Fragment>
         {/* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"></link> */}
-            <div className="Header">
+        <div className="Header">
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             
             <div className="navbar-collapse" id="navbarNav">
@@ -21,7 +21,7 @@ class Header extends Component {
                     <li className="active"><a href="/jobs">Jobs</a></li>
                     <li className="dropdown"><a className="dropdown-toggle" data-toggle="dropdown" href="/jobs">My Jobs<span className="caret"></span></a>
                       <ul className="dropdown-menu">
-                            <li><a href="/jobs/add">Add a Job Link</a></li>
+                            <li><a href="/jobs/add">Add a Job Link <i className="fas fa-trash-alt"></i></a></li>
                             <li><a href="/saved-job">Saved Job</a></li>
                             <li><a href="#">Page 1-3</a></li>
                         </ul>
