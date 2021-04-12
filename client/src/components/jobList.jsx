@@ -63,13 +63,13 @@ class JobList extends Component {
     
 
 render() {
-  
-            return (
+    return (
 <React.Fragment>
 
 <div className ="job-list"> 
     {this.state.jobList.map((job) => (
         <div className ="job-list-card card">
+
             <div className="card-header">
                <h5> <a href = {job.refs.landing_page}>{job.name}</a></h5>
                 <p className="font-weight-light">{job.company.name}</p>
@@ -80,6 +80,7 @@ render() {
             <div className="card-body">
                 <h5 className="card-title">{job.locations.name}</h5>
                 <p className="card-text">{ReactHtmlParser(job.contents).slice(0,1)}</p>
+
                 <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#jobDescModal"> View More</button> 
             </div>
             <div class="card-footer">
@@ -114,6 +115,7 @@ render() {
 
 
 
+
 <nav aria-label="Page navigation example">
   <ul className="pagination justify-content-center">
     <li className="page-item disabled">
@@ -128,7 +130,7 @@ render() {
   </ul>
 </nav>
 </React.Fragment>
-            )
+        )
     }
 }
 

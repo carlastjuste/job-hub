@@ -31,6 +31,7 @@ JobHub is an open sourced, job search tool. The app uses API's to search multipl
 * Carla St. Juste
 * Maria Ortega
 * Wilkinson Williams
+* Ivodia Ngoh
 
 ## Licenses
 
@@ -41,6 +42,7 @@ JobHub is an open sourced, job search tool. The app uses API's to search multipl
  * <a href="mailto:carlastjuste@gmail.com"> Carla St.Juste</a>
  * <a href="mailto:mariaortegapb@gmail.com"> Maria Ortega </a>
  * <a href="mailto:srawilkinsonwilliams@yahoo.com"> Wilkinson Williams </a>
+ * <a href="mailto:ivodiainjoh@gmail.com"> Ivodia Ngoh </a>
 
 
 
