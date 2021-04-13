@@ -4,6 +4,7 @@ import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from
 import _ from 'lodash';
   
 import axios from "axios";
+import { ThreeDotsVertical } from 'react-bootstrap-icons';
 
 class JobList extends Component {
     state = { 
@@ -27,15 +28,12 @@ class JobList extends Component {
     // }
 
     async componentDidMount () {
-        const res = await axios.get("https://www.themuse.com/api/public/jobs?page=1"); 
+        const url = "https://www.themuse.com/api/public/jobs?page=" + this.state.pageNumber;
+        const res = await axios.get(url); 
         const jobList = res.data.results;
         this.setState({jobList : jobList});
         console.log(jobList);
     }
-
-
-
-
 
 
 
@@ -45,35 +43,6 @@ class JobList extends Component {
         this.setState({pageNumber : number})
     }
 
-    // FormatDate(dat) {
-    // const date = new Date(dat);
-    // let year = date.getFullYear();
-    // let month = (1 + date.getMonth()).toString().padStart(2, '0');
-    // let day = date.getDate().toString().padStart(2, '0');
-
-    // return month + '-' + day + '-' + year;
-    // }
-
-    // sortColumn = path =>{
-    //     //console.log(path)
-    //     let emp = this.state.employeeList;
-    //     switch (path) {
-    //         case 'phone': 
-    //             emp = _.orderBy(emp, ['phone'], ['asc']);
-    //             break;
-    //         case 'email': 
-    //             emp = _.orderBy(emp, ['email'], ['asc']);
-    //             break; 
-    //         case 'name':
-    //             emp = _.orderBy(emp, ['name.first'], ['asc']);
-    //             break; 
-    //         default:
-    //             break;                 
-    //     }
-
-    //     this.setState({employeeList: emp});
-
-    // };
     
 
     
