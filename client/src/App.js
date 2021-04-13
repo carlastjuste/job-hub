@@ -6,8 +6,8 @@ import JobSearch from './components/jobSearchArea';
 import JobForm from './components/jobForm'
 import StatArea from './components/statArea';
 import Footer from './components/footer';
-import Login from './components/login';
-import Registration from './components/registration';
+import LoginForm from './components/loginForm';
+import RegistrationForm from './components/registrationForm';
 import JobList from './components/jobList';
 import SavedJobs from './components/savedJobs';
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -15,6 +15,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { Search } from 'react-bootstrap-icons';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
+import './form.css';
 
 
 const isLoggedIn = true;
@@ -46,11 +47,11 @@ function App() {
          </Route>
 
          <Route exact path = "/registration">
-         <Registration />
+         <RegistrationForm />
          </Route>
 
          <Route exact path = "/login">
-         <Login />
+         <LoginForm />
          </Route>
 
 
