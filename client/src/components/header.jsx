@@ -28,9 +28,9 @@ class Header extends Component {
                     <li><a href="/profile" className="nav-item px-3">Profile</a></li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
-                    <li ><a href="/registration"  className="nav-item px-3" ><span className="glyphicon glyphicon-user"></span> 👤  Sign Up</a></li>
+                    <li ><a href="/registrer"  className="nav-item px-3" ><span className="glyphicon glyphicon-user"></span> 👤  Sign Up</a></li>
                     <li ><a href="/login" className="nav-item px-3"><span className="glyphicon glyphicon-log-in"></span> ➡️   Login</a></li>
-                    </ul>
+                </ul>
            
                 </div>
                 </nav>

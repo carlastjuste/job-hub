@@ -46,7 +46,7 @@ function App() {
          <JobList />
          </Route>
 
-         <Route exact path = "/registration">
+         <Route exact path = "/registrer">
          <RegistrationForm />
          </Route>
 
