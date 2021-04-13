@@ -30,6 +30,7 @@ class Header extends Component {
                 <ul class="navbar-nav ml-auto">
                     <li ><a href="/registrer"  className="nav-item px-3" ><span className="glyphicon glyphicon-user"></span> 👤  Sign Up</a></li>
                     <li ><a href="/login" className="nav-item px-3"><span className="glyphicon glyphicon-log-in"></span> ➡️   Login</a></li>
+                    <li ></li><a href="/auth/google">Sign In With Google</a>
                 </ul>
            
                 </div>
