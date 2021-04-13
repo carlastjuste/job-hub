@@ -20,7 +20,7 @@ class  JobSearch extends Component {
     async getJob (){
 
         try{
-        const url = "https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=" + this.state.searchValue;
+        const url = "https://jobs.github.com/positions.json?description=" + this.state.searchValue;
         const res = await axios.get(url); 
         // const jobList = res.data.results;
         // this.setState({jobList : jobList});
