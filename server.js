@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const keys = require('./config/keys.js');
 const mongoose = require('mongoose');
 const bodyParser = require("body-parser");
 const path = require("path");
@@ -15,7 +16,20 @@ const uri = process.env.MONGODB_URI;
 
 const app = express();
 
-passport.use(new GoogleStrategy());
+passport.use(
+  
+  new GoogleStrategy({
+    clientID : keys.googleClientId,
+    clientSecret:  keys.googleClientSecret,
+    callbackURL: '/auth/google/callback'
+}, (accessToken) => {
+   console.log(accessToken);
+})
+);
+
+app.get('/auth/google', passport.authenticate('google', {
+  scope: ['profile', 'email']
+}))
 
 
 app.use(cors());
