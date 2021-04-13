@@ -10,9 +10,16 @@ class RegistrationForm extends Component {
             passwordConfirm: '',
             firstName:'',
             lastName:''
+        },
+        errors: {
+            username:''
         }
 
      }
+
+     componentDidMount() {
+        // this.username.current.focus();
+    }
 
 
      handleChange = e => {
@@ -22,13 +29,27 @@ class RegistrationForm extends Component {
 
     };
 
+    // validate = () => {
+    //     const errors = {};
+
+    //     const {account} = this.state;
+    //     if(account.username.trim() ==='')
+    //         errors.username = 'Username is required.';
+    // }
+
 
     handleSubmit = e => {
 
         e.preventDeault();
+
+        const errors = this.validate();
+        this.setState({errors});
+        if (errors) return;
+
         console.log("Submited");
 
     }
+
 
 
 

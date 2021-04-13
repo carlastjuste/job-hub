@@ -5,7 +5,10 @@ class LoginForm extends Component {
     state = { 
         account: {
             username: '' , 
-            password:''}
+            password:''},
+        errors: {
+            username:''
+        }
      }
 
     componentDidMount() {
@@ -19,15 +22,27 @@ class LoginForm extends Component {
 
     };
 
-    handleSubmit = e => {
+    validate = () => {
+        const errors = {};
 
+        const {account} = this.state;
+        if(account.username.trim() ==='')
+            errors.username = 'Username is required.';
+    }
+
+    handleSubmit = e => {
         e.preventDeault();
+
+        const errors = this.validate();
+        this.setState({errors});
+        if (errors) return;
+
         console.log("Submited");
 
     }
 
 render() { 
-    const {account} = this.state;
+    const {account, errors} = this.state;
 
     return ( 
         <React.Fragment>
@@ -42,6 +57,7 @@ render() {
                                 autoFocus
                                 value={account.username} 
                                 onChange={this.handleChange}
+                                error={errors.username}
                                 type="email" 
                                 className="form-control" 
                                 id="username" 
@@ -55,6 +71,7 @@ render() {
                             <input 
                                 value={account.password} 
                                 onChange={this.handleChange}
+                                error={errors.password}
                                 type="password" 
                                 className="form-control" 
                                 id="password" 
