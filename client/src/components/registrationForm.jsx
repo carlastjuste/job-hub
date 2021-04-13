@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import "../styles/Form.css";
 
-
+const apiEndPoint = "http://localhost:5000/register";
 class RegistrationForm extends Component {
     state = { 
         account: {
@@ -29,13 +29,6 @@ class RegistrationForm extends Component {
 
     };
 
-    // validate = () => {
-    //     const errors = {};
-
-    //     const {account} = this.state;
-    //     if(account.username.trim() ==='')
-    //         errors.username = 'Username is required.';
-    // }
 
 
     handleSubmit = e => {

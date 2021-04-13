@@ -35,6 +35,12 @@ const connection = mongoose.connection;
 connection.once('open', () => console.log("MongoDB database connection established successfully"));
 connection.on('error', err => logError(err));
 
+// ================================================================================
+// ROUTER
+// ================================================================================
+//require("./routes");
+
+
 
 // Serve static content for the app from the "public" directory in the application directory.
 if (process.env.NODE_ENV === "production") {
