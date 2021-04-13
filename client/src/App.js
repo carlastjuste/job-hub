@@ -29,11 +29,11 @@ function App() {
      <div>
        <Header />
        <Switch>
-         <Route exact path = "/t">
+         <Route exact path = "/">
             <JobSearch />
             <StatArea />
          </Route>
-         <Route exact path = "/">
+         <Route exact path = "/t">
             <JobSearch />
        
          </Route>
