@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import * as isi from "isidom";
 
 const apiEndPoint = "http://localhost:5000/jobs/add";
 
@@ -44,7 +45,7 @@ class jobForm extends Component {
 
     try {
        //call backend server
-       console.log('Submitted');
+       console.log(isi.$cssAlignContent);
     //    const obj =  {
     //     jobtitle: "test add",
     //     compagny:  "CACY",
