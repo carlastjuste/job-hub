@@ -3,38 +3,109 @@ import React, { Component } from 'react';
 
 
 class RegistrationForm extends Component {
-    state = {  }
+    state = { 
+        account: {
+            username: '' , 
+            password:'' , 
+            passwordConfirm: '',
+            firstName:'',
+            lastName:''
+        }
+
+     }
+
+
+     handleChange = e => {
+        const account = {...this.state.account};
+        account[e.currentTarget.name] = e.currentTarget.value;
+        this.setState({account});
+
+    };
+
+
+    handleSubmit = e => {
+
+        e.preventDeault();
+        console.log("Submited");
+
+    }
+
+
+
     render() { 
+        const {account} = this.state; 
+
         return ( 
           <React.Fragment>
           <div className="form">
               <div className="form-header">
                   <h1>Sign Up</h1>
               </div>
-              <form>
+              <form onSubmit={this.handleSubmit}>
                       <div className="form-group">
-                          <label for="Username"></label>
-                          <input type="email" className="form-control" id="username" aria-describedby="emailHelp" placeholder="Username" />
+                          <label for="username"></label>
+                          <input 
+                            autoFocus 
+                            value={account.username} 
+                            onChange={this.handleChange}
+                            type="email" 
+                            className="form-control" 
+                            id="username" 
+                            name="username"
+                            aria-describedby="emailHelp" 
+                            placeholder="Email" />
                           <small id="emailHelp" className="form-text text-muted"></small>
                       </div>
                       <div className="form-group">
-                          <label for="Username"></label>
-                          <input type="email" className="form-control" id="password" aria-describedby="emailHelp" placeholder="Password" />
+                          <label for="password"></label>
+                          <input 
+                            value={account.password} 
+                            onChange={this.handleChange}
+                            type="email" 
+                            className="form-control" 
+                            id="password" 
+                            name="password"
+                            aria-describedby="emailHelp" 
+                            placeholder="Password" />
                           <small id="emailHelp" className="form-text text-muted"></small>
                       </div>
                       <div className="form-group">
-                          <label for="Username"></label>
-                          <input type="email" className="form-control" id="passwordconfirm" aria-describedby="emailHelp" placeholder="Confirm Password" />
+                          <label for="passwordConfirm"></label>
+                          <input 
+                            value={account.passwordConfirm} 
+                            onChange={this.handleChange}
+                            type="email" 
+                            className="form-control" 
+                            id="passwordConfirm"
+                            name="passwordConfirm" 
+                            aria-describedby="emailHelp" 
+                            placeholder="Confirm Password" />
                           <small id="emailHelp" className="form-text text-muted"></small>
                       </div>
                       <div className="form-group">
-                          <label for="Username"></label>
-                          <input type="email" className="form-control" id="username" aria-describedby="emailHelp" placeholder="First Name" />
+                          <label for="firstName"></label>
+                          <input 
+                            value={account.firstName} 
+                             onChange={this.handleChange}
+                            type="email" 
+                            className="form-control" 
+                            id="firstName" 
+                            name="firstName"
+                            aria-describedby="emailHelp" 
+                            placeholder="First Name" />
                           <small id="emailHelp" className="form-text text-muted"></small>
                       </div>
                       <div className="form-group">
-                          <label for="Username"></label>
-                          <input type="email" className="form-control" id="username" aria-describedby="emailHelp" placeholder="Last Name" />
+                          <label for="lastName"></label>
+                          <input 
+                            value={account.lastName} 
+                            onChange={this.handleChange}
+                            type="email" 
+                            className="form-control" 
+                            id="lastName" 
+                            name="lastName"
+                            aria-describedby="emailHelp" 
+                            placeholder="Last Name" />
                           <small id="emailHelp" className="form-text text-muted"></small>
                       </div>
                       <div className = "form-group"> 

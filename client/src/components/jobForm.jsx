@@ -6,7 +6,16 @@ const apiEndPoint = "http://localhost:5000/jobs/add";
 
 class jobForm extends Component {
     state = {
-        job: { jobtitle: '', company:'', city:'', state:'', country:'', link:'', status:'', note:''}
+        job: { 
+            jobtitle: '', 
+            company:'', 
+            city:'', 
+            state:'', 
+            country:'', 
+            link:'', 
+            status:'', 
+            note:''}
+
     };
 
 
