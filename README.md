@@ -17,7 +17,6 @@ JobHub is an open sourced, job search tool. The app uses API's to search multipl
 ## Live Link
 
 [Link to the app](https://career-hub.herokuapp.com/)
-
 ## Technologies
 
  1. React
