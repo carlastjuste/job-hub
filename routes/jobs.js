@@ -10,7 +10,7 @@ router.route('/').get((req, res) => {
 
 router.route('/add').post((req, res) => {
   const jobtitle = req.body.jobtitle;
-  const compagny = req.body.compagny;
+  const company = req.body.company;
   const city = req.body.city;
   const state = req.body.state;
   const country = req.body.country;
@@ -22,7 +22,7 @@ router.route('/add').post((req, res) => {
 
   const newJob = new Job({
     jobtitle,
-    compagny,
+    company,
     city,
     state,
     country,
@@ -32,10 +32,22 @@ router.route('/add').post((req, res) => {
 
   });
 
-  newJob.save()
-  .then(() => res.json('Job added!'))
-  .catch(err => res.status(400).json('Error: ' + err));
-});
+  // newJob.save()
+  // .then(() => res.json('Job added!'))
+  // .catch(
+  //   //err => res.status(400).json('Error: ' + err)
+  //   );
 
+
+  newJob.save(function(err,result){
+    if (err){
+        console.log(err);
+    }
+    else{
+        console.log(result)
+    }})
+
+  
+});
 
 module.exports = router;
