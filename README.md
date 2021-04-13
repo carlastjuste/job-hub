@@ -16,7 +16,7 @@ JobHub is an open sourced, job search tool. The app uses API's to search multipl
 
 ## Live Link
 
-[Link to the app]
+[Link to the app](https://career-hub.herokuapp.com/)
 
 ## Technologies
 
@@ -25,6 +25,8 @@ JobHub is an open sourced, job search tool. The app uses API's to search multipl
  3. MySQL
  4. Heroku
  5. APIs
+ 6. Isidom
+ 7. Ant Design
 
 ## Contributors
 
@@ -32,6 +34,7 @@ JobHub is an open sourced, job search tool. The app uses API's to search multipl
 * Maria Ortega
 * Wilkinson Williams
 * Ivodia Ngoh
+* Taiyah Miller
 
 ## Licenses
 
@@ -43,6 +46,7 @@ JobHub is an open sourced, job search tool. The app uses API's to search multipl
  * <a href="mailto:mariaortegapb@gmail.com"> Maria Ortega </a>
  * <a href="mailto:srawilkinsonwilliams@yahoo.com"> Wilkinson Williams </a>
  * <a href="mailto:ivodiainjoh@gmail.com"> Ivodia Ngoh </a>
+ * <a href="mailto:taiyahm23@gmail.com"> Taiyah Miller </a>
 
 
 
