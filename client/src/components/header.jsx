@@ -25,7 +25,6 @@ class Header extends Component {
                             <li><a href="/saved-job">Saved Job List</a></li>
                         </ul>
                     </li>
-                    <li><a href="/profile" className="nav-item px-3">Profile</a></li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li ><a href="/registrer"  className="nav-item px-3" ><span className="glyphicon glyphicon-user"></span> 👤  Sign Up</a></li>
