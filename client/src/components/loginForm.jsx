@@ -82,7 +82,7 @@ render() {
                             <input type="submit" className="form-control" id="sub-form" value="Log In" />
                         </div>
                         <div id="formFooter">
-                            <a className="underlineHover" href="#">Forgot Password?</a>
+                            <a className="underlineHover" href="/recover">Forgot Password?</a>
                         </div>
                 </form>
             </div>

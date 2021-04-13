@@ -41,7 +41,7 @@ function App() {
            <SavedJobs />
          </Route>
 
-         <Route exact path = "/jobs">
+         <Route exact path = "/jobs-search">
          <JobSearch />
          <JobList />
          </Route>
