@@ -21,6 +21,12 @@ app.use(bodyParser.json());
 app.use('/jobs', jobsRouter);
 app.use('/users', usersRouter);
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+  });
+
 
 mongoose.connect(uri, {
   useNewUrlParser: true,
