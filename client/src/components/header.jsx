@@ -6,18 +6,16 @@ class Header extends Component {
 
     render() { 
         return ( 
-    <React.Fragment>
-        {/* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"></link> */}
-        <div className="Header">
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <React.Fragment>
+                 {/* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"></link> */}
+                <div className="Header">
+                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             
-            <div className="navbar-collapse" id="navbarNav">
-                <div className="navbar-header">
-                    <a className="navbar-brand" href="/">Carreer Hub</a>
-                </div>
-                <ul className="nav navbar-nav justify-content-center">
-
-
+                <div className="navbar-collapse" id="navbarNav">
+                    <div className="navbar-header">
+                     <a className="navbar-brand" href="/">Carreer Hub</a>
+                    </div>
+                    <ul className="nav navbar-nav justify-content-center">
                     <li className="active"><a href="/jobs-search">Jobs</a></li>
                     <li className="dropdown"><a className="dropdown-toggle" data-toggle="dropdown" href="/jobs">My Jobs<span className="caret"></span></a>
                       <ul className="dropdown-menu">

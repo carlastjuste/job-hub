@@ -51,7 +51,7 @@ render() {
     return (
 <React.Fragment>
 
-<div className ="job-list"> 
+    <div className ="job-list"> 
     {this.state.jobList.map((job) => (
         <div className ="job-list-card card">
 
@@ -94,24 +94,20 @@ render() {
                 </div>
             </div>  
         </div>       
-))}
-</div>
+    ))}
+  </div>
 
-
-
-
-
-<nav aria-label="Page navigation example">
-  <ul className="pagination justify-content-center">
-    <li className="page-item disabled">
-      <a className="page-link" href="#" tabindex="-1">Previous</a>
-    </li>
-    <li className="page-item">
-      <a className="page-link" href="#">Next</a>
-    </li>
-  </ul>
-</nav>
-</React.Fragment>
+        <nav aria-label="Page navigation example">
+            <ul className="pagination justify-content-center">
+                <li className="page-item disabled">
+                 <a className="page-link" href="#" tabindex="-1">Previous</a>
+                </li>
+                <li className="page-item">
+                 <a className="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+  </React.Fragment>
         )
     }
 }

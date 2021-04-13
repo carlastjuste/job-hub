@@ -28,7 +28,7 @@ mongoose.connect(uri, {
   useCreateIndex: true,
   useFindAndModify: false
 })
-  .catch(error => handleError(error));
+.catch(error => handleError(error));
 
 
 const connection = mongoose.connection;

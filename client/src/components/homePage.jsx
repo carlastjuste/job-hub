@@ -9,14 +9,14 @@ class homePage extends Component {
     state = {  }
     render() { 
         return ( 
-<React.Fragment>
-    <Header />
-    <JobSearch />
-    <StatArea />
-    <Footer />
-</React.Fragment>
+            <React.Fragment>
+                <Header />
+                <JobSearch />
+                <StatArea />
+                <Footer />
+            </React.Fragment>
 
-         );
+        );
     }
 }
  

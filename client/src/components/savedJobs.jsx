@@ -30,26 +30,27 @@ class SavedJobs extends Component {
 
     render() { 
         console.log(this.state.job);
-        return (
-<React.Fragment>
+     return (
+        <React.Fragment>
     {/* Input to search for saved jobs by job title */}
-    <div className = "search-area">
-        <input className = "form-control" 
+        <div className = "search-area">
+          <input className = "form-control" 
             value={this.state.SearchValue}
             onChange={this.handleChange}
             type="search" 
-            placeholder="Search by job title..."  />
-    </div>
+            placeholder="Search by job title..." 
+           />
+        </div>
 
-    {/* Card to display Saved Jobs */}
-    <div className ="card-deck"> 
-        {this.state.jobs.filter(job =>{
+      {/* Card to display Saved Jobs */}
+        <div className ="card-deck"> 
+        {this.state.jobs.filter((job => {
             if (this.state.searchValue ==="") 
                 {return job;}
             else if (job.jobtitle.toLowerCase().includes(this.state.searchValue.toLowerCase()))
                 {return job;}
-            }
-        ).map((job, index) => (
+
+        }).map((job, index) => (
 
         <div className="card" >
             <div className="card-header">
@@ -96,11 +97,11 @@ class SavedJobs extends Component {
                 </div>
             </div>
         </div>
-    ))}
-    </div>
-</React.Fragment>
-         );
-    }
+      ))}
+        </div>
+       </React.Fragment>
+    );
+  }
 }
  
 export default SavedJobs;
