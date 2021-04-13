@@ -14,9 +14,18 @@ class jobForm extends Component {
             country:'', 
             link:'', 
             status:'', 
-            note:''}
+            note:''},
+        errors: {
+            jobtitle:'',
+            company:''
+
+            }
 
     };
+
+    componentDidMount() {
+        // this.username.current.focus();
+    }
 
 
     onSubmit(e) {
@@ -32,6 +41,10 @@ class jobForm extends Component {
 
     handleSubmit = async e => {
        e.preventDefault(); 
+
+       const errors = this.validate();
+        this.setState({errors});
+        if (errors) return;
 
        //call backend server
        console.log('Submitted');

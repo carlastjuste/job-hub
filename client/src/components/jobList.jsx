@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
-import API from "../utils/API";
+//import API from "../utils/API";
 import _ from 'lodash';
+  
+import axios from "axios";
 
 class JobList extends Component {
     state = { 
@@ -17,12 +19,26 @@ class JobList extends Component {
 
     }
 
+    // async componentDidMount () {
+    //     const res = await API.getJobs(this.state.pageNumber); 
+    //     const jobList = res.data.results;
+    //     this.setState({jobList : jobList});
+    //     console.log(jobList);
+    // }
+
     async componentDidMount () {
-        const res = await API.getJobs(this.state.pageNumber); 
+        const res = await axios.get("https://www.themuse.com/api/public/jobs?page=1"); 
         const jobList = res.data.results;
         this.setState({jobList : jobList});
         console.log(jobList);
     }
+
+
+
+
+
+
+
 
     handlePageChange = (pageNumber) => {
         const number = pageNumber;
