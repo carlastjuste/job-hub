@@ -23,4 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 #sensitive info
-keys.js
+config/dev.js
