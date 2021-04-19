@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-//import "../styles/Form.css";
 
+import axios from 'axios';
+
+const apiEndPoint = "http://localhost:5000/users/add";
+//import "../styles/Form.css";
 
 class RegistrationForm extends Component {
     state = { 
@@ -29,27 +32,23 @@ class RegistrationForm extends Component {
 
     };
 
-    // validate = () => {
-    //     const errors = {};
-
-    //     const {account} = this.state;
-    //     if(account.username.trim() ==='')
-    //         errors.username = 'Username is required.';
-    // }
 
 
-    handleSubmit = e => {
-
-        e.preventDeault();
-
-        const errors = this.validate();
-        this.setState({errors});
-        if (errors) return;
-
-        console.log("Submited");
-
-    }
-
+    handleSubmit = async e => {
+        e.preventDefault(); 
+        if (this.state.password === this.state.passwordConfirm) {
+ 
+     try {
+        //call backend server
+        console.log('Submitted');
+        const {data: account} = await axios.post(apiEndPoint, this.state.account, {headers:{"Content-Type" : "application/json"}});
+        console.log(account);
+        }catch (err) {
+            console.log(err);
+        }
+    }else
+    return 'Passwords different';
+            }
 
 
 
@@ -82,24 +81,22 @@ class RegistrationForm extends Component {
                           <input 
                             value={account.password} 
                             onChange={this.handleChange}
-                            type="email" 
+                            type="Text" 
                             className="form-control" 
                             id="password" 
                             name="password"
-                            aria-describedby="emailHelp" 
                             placeholder="Password" />
-                          <small id="emailHelp" className="form-text text-muted"></small>
+
                       </div>
                       <div className="form-group">
                           <label for="passwordConfirm"></label>
                           <input 
                             value={account.passwordConfirm} 
                             onChange={this.handleChange}
-                            type="email" 
+                            type="text" 
                             className="form-control" 
                             id="passwordConfirm"
                             name="passwordConfirm" 
-                            aria-describedby="emailHelp" 
                             placeholder="Confirm Password" />
                           <small id="emailHelp" className="form-text text-muted"></small>
                       </div>
@@ -108,11 +105,10 @@ class RegistrationForm extends Component {
                           <input 
                             value={account.firstName} 
                              onChange={this.handleChange}
-                            type="email" 
+                            type="text" 
                             className="form-control" 
                             id="firstName" 
                             name="firstName"
-                            aria-describedby="emailHelp" 
                             placeholder="First Name" />
                           <small id="emailHelp" className="form-text text-muted"></small>
                       </div>
@@ -121,11 +117,10 @@ class RegistrationForm extends Component {
                           <input 
                             value={account.lastName} 
                             onChange={this.handleChange}
-                            type="email" 
+                            type="text" 
                             className="form-control" 
                             id="lastName" 
                             name="lastName"
-                            aria-describedby="emailHelp" 
                             placeholder="Last Name" />
                           <small id="emailHelp" className="form-text text-muted"></small>
                       </div>

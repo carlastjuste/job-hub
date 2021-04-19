@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import * as isi from "isidom";
 
 const apiEndPoint = "http://localhost:5000/jobs/add";
 
@@ -42,15 +43,24 @@ class jobForm extends Component {
     handleSubmit = async e => {
        e.preventDefault(); 
 
-       const errors = this.validate();
-        this.setState({errors});
-        if (errors) return;
-
+    try {
        //call backend server
-       console.log('Submitted');
-       const {data: job} = await axios.post(apiEndPoint, this.state.job)
-       console.log(job)
-
+       console.log(isi.$cssAlignContent);
+    //    const obj =  {
+    //     jobtitle: "test add",
+    //     compagny:  "CACY",
+    //     city: "Fort Bragg",
+    //     state: "NC",
+    //     country: "USA",
+    //     link: "https://www.indeed.com/jobs?q=full%20stack%20developer&l&ts=1618285026382&rq=1&rsIdx=0&fromage=last&newcount=90&vjk=68d4b0ecf7f51c99",
+    //     status: "",
+    //     note: "Development languages: Knowledge of server-side programming languages including Net, Java, Ruby and Python."
+    // };
+       const {data: job} = await axios.post(apiEndPoint, this.state.job, {headers:{"Content-Type" : "application/json"}});
+       console.log(job);
+}catch (err) {
+    console.log(err);
+}
     }
 
 
@@ -63,7 +73,7 @@ class jobForm extends Component {
     <form className="job-from" onSubmit={this.handleSubmit}>
         <div className="form-row">
             <div className="form-group col-md-6">
-                <label for="job-title">Job Title :</label>
+                <label htmlFor="job-title">Job Title :</label>
                 <input 
                     autoFocus 
                     value={job.jobtitle} 
@@ -76,21 +86,21 @@ class jobForm extends Component {
                 />
             </div>
             <div className="form-group col-md-6">
-                <label for="compagny">Company :</label>
+                <label htmlFor="company">Company :</label>
                 <input 
                     value={job.company} 
                     onChange={this.handleChange}
                     name="company"
                     type="text" 
                     className="form-control" 
-                    id="compagny" 
+                    id="company" 
                     placeholder="" 
                 />
             </div>
         </div>
         <div className="form-row">
             <div className="form-group col-md-6">
-                <label for="inputCity">City :</label>
+                <label htmlFor="inputCity">City :</label>
                 <input
                     value={job.city} 
                     onChange={this.handleChange}
@@ -101,21 +111,21 @@ class jobForm extends Component {
                 />
             </div>
             <div className="form-group col-md-3">
-                 <label for="inputState">State :</label>
+                 <label htmlFor="inputState">State :</label>
                  <select id="inputState" className="form-control">
                  <option selected>Choose...</option>
                  <option>...</option>
                 </select>
             </div>
             <div className="form-group col-md-3">
-                 <label for="inputCountry">Country :</label>
+                 <label htmlFor="inputCountry">Country :</label>
                  <select id="inputCountry" className="form-control">
                  <option selected>Choose...</option>
                  <option>...</option>
                 </select>
             </div>
         </div>
-        <label for="basic-url">Job Post URL: </label>
+        <label htmlFor="basic-url">Job Post URL: </label>
             <div className="input-group mb-3">
             <div className="input-group-prepend">
                 <span className="input-group-text" id="basic-addon3">https://example.com/</span>
@@ -141,12 +151,12 @@ class jobForm extends Component {
                             className="form-check-input" 
                             type="checkbox" 
                             id="gridCheck1" />
-                        <label className="form-check-label" for="gridCheck1"> Applied </label>
+                        <label className="form-check-label" htmlFor="gridCheck1"> Applied </label>
                     </div>
                 </div>
         </div>
         <div className="form-group">
-            <label for="note">Notes :</label>
+            <label htmlFor="note">Notes :</label>
             <textarea 
                 value={job.note} 
                 onChange={this.handleChange}
@@ -156,7 +166,7 @@ class jobForm extends Component {
                 rows="3"
             ></textarea>
         </div>
-        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+        <button type="submit" className="btn btn-primary btn-lg">Submit</button>
 
     </form>
     

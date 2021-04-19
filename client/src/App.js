@@ -2,7 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route , Switch} from "react-router-dom";
 import HomePage from './components/homePage';
 import Header from './components/header';
-import JobSearch from './components/jobSearchArea';
+import JobSearch from './components/jobSearch';
+import JobSearchArea from './components/jobSearchArea';
 import JobForm from './components/jobForm'
 import StatArea from './components/statArea';
 import Footer from './components/footer';
@@ -31,6 +32,10 @@ function App() {
          <Route exact path = "/">
             <JobSearch />
             <StatArea />
+         </Route>
+         <Route exact path = "/t">
+            <JobSearch />
+       
          </Route>
 
          <Route exact path={isLoggedIn ? '/jobs/add' : '/login'}>
