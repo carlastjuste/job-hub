@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { YoutubeOutlined } from '@ant-design/icons';
-
 
 class Footer extends Component {
     state = {  }
@@ -27,7 +25,7 @@ class Footer extends Component {
               <a href="#">Privacy Policy</a>
             </li>
           </ul>
-          <p class="text-muted small mb-4 mb-lg-0">&copy; Team 6 UNCC 2021. All Rights Reserved.</p>
+          <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2020. All Rights Reserved.</p>
         </div>
         <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
           <ul class="list-inline mb-0">
@@ -44,11 +42,6 @@ class Footer extends Component {
             <li class="list-inline-item">
               <a href="#">
                 <i class="fab fa-instagram fa-2x fa-fw"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i> <YoutubeOutlined  style={{ fontSize: '30px', color: '#08c' }} />; </i>
               </a>
             </li>
           </ul>

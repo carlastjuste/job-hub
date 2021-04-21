@@ -6,27 +6,15 @@ import Footer from './footer';
 
 
 class homePage extends Component {
-    state = { 
-        searchValue: ''
-      }
-  
-  
-      handleChange = e => {
-        let searchValue = this.state.SearchValue;
-        searchValue = e.currentTarget.value;
-        this.setState({searchValue});
-    }
-    
-    
-    
+    state = {  }
     render() { 
         return ( 
-            <React.Fragment>
-                <Header />
-                <JobSearch />
-                <StatArea />
-                <Footer />
-            </React.Fragment>
+<React.Fragment>
+    <Header />
+    <JobSearch />
+    <StatArea />
+    <Footer />
+</React.Fragment>
 
          );
     }

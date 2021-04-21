@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import JobForm from './jobForm'
 
-
+import axios from 'axios';
 
 const apiEndPoint = "http://localhost:5000/jobs/";
 
@@ -57,7 +56,7 @@ class SavedJobs extends Component {
             </div>
 
             <ul className="list-group list-group-flush">
-                <li className="list-group-item" key={index + 1}>Company: <i>{job.company}</i></li>
+                <li className="list-group-item" key={index + 1}>Company: <i>{job.compagny}</i></li>
                 <li className="list-group-item" key={index + 2}>Location: <i>{job.city}, {job.state} - {job.country}</i></li>
                 <li className="list-group-item" key={index + 3}>Status: <i>{job.status}</i></li>
                 <li className="list-group-item" key={index + 4}>Note: <i>{job.note}</i></li>
@@ -85,7 +84,7 @@ class SavedJobs extends Component {
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
                         <div className="modal-body">
-                            <p> Are you sure you want to delete <b>{job.jobtitle} </b>from <b>{job.company} </b>?</p>
+                            <p> Are you sure you want to delete <b>{job.jobtitle} </b>from <b>{job.compagny} </b>?</p>
                         </div>
                     <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" data-dismiss="modal">No</button>

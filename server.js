@@ -1,6 +1,9 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+const passport = require('passport');
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const keys = require('./config/keys.js');
 const mongoose = require('mongoose');
 const bodyParser = require("body-parser");
 const path = require("path");
@@ -13,6 +16,21 @@ const uri = process.env.MONGODB_URI;
 
 const app = express();
 
+passport.use(
+  
+  new GoogleStrategy({
+    clientID : keys.googleClientId,
+    clientSecret:  keys.googleClientSecret,
+    callbackURL: '/auth/google/callback'
+}, (accessToken) => {
+   console.log(accessToken);
+})
+);
+
+app.get('/auth/google', passport.authenticate('google', {
+  scope: ['profile', 'email']
+}))
+
 
 app.use(cors());
 app.use(express.json());
@@ -20,12 +38,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use('/jobs', jobsRouter);
 app.use('/users', usersRouter);
-
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "X-Requested-With");
-  next();
-  });
 
 
 mongoose.connect(uri, {
@@ -40,12 +52,6 @@ mongoose.connect(uri, {
 const connection = mongoose.connection;
 connection.once('open', () => console.log("MongoDB database connection established successfully"));
 connection.on('error', err => logError(err));
-
-// ================================================================================
-// ROUTER
-// ================================================================================
-//require("./routes");
-
 
 
 // Serve static content for the app from the "public" directory in the application directory.
